@@ -32,7 +32,7 @@ module Kitchen
       # Invoke the command.
       def call
         specs = fetch_gem_specs.sort { |x, y| x[0] <=> y[0] }
-        specs = specs[0, 49].push(["...", "..."]) if specs.size > 49
+        specs = specs[0, 99].push(["...", "..."]) if specs.size > 99
         specs = specs.unshift(["Gem Name", "Latest Stable Release"])
         print_table(specs, :indent => 4)
       end
